@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: monument extended;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monument Extended'), url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff) format('woff')
+}
+
+@font-face {
+  font-family: monument extended;
+  font-style: normal;
+  font-weight: 800;
+  src: local('Monument Extended'), url(https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff) format('woff')
+}
+
+@theme {
+  --aspect-portrait: 3/5;
+  --color-valorant-black: #1F2326;
+  --color-valorant-red: #FF4655;
+  --font-monument: 'monument extended', sans-serif;
+  --font-saira: "Saira", sans-serif;
+  --spacing-navbar-space: 92px;
+}
+
+html {
+  background-color: var(--color-valorant-red);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+  
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px var(--color-white);
+}

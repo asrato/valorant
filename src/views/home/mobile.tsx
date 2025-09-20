@@ -1,0 +1,21 @@
+import { useNavigate } from "react-router";
+
+import Title from "../../layout/title";
+import Button from "../../shared/button";
+
+export default function HomeViewMobile() {
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <Title content="Home" />
+      <div className="w-full grid grid-cols-2 gap-4">
+        <Button
+          className="col-span-1"
+          label="Agents"
+          onClick={() => navigate("/agents")}
+        />
+      </div>
+    </>
+  );
+}
