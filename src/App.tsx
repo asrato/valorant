@@ -5,11 +5,9 @@ import HomeView from "./views/home";
 import AgentsView from "./views/agents";
 import AgentView from "./views/agent";
 
-const basename = import.meta.env.PROD ? "/valorant" : undefined;
-
 function App() {
   return (
-    <HashRouter basename={basename}>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomeView />} />
