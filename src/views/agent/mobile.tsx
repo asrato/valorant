@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 
 import useGetAgent from "../../hooks/use-get-agent";
 import AgentAbilities from "./components/agent-abilities";

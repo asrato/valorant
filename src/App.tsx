@@ -1,13 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 import MainLayout from "./layout/main-layout";
 import HomeView from "./views/home";
 import AgentsView from "./views/agents";
 import AgentView from "./views/agent";
 
+const basename = import.meta.env.PROD ? "/valorant" : undefined;
+
 function App() {
   return (
-    <BrowserRouter basename="/valorant">
+    <HashRouter basename={basename}>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomeView />} />
@@ -15,7 +17,7 @@ function App() {
           <Route path="agent/:uuid" element={<AgentView />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
