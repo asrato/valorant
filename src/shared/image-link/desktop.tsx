@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import Image from "../image";
+
 interface DesktopImageLinkProps {
   image: string;
   label: string;
@@ -19,7 +21,11 @@ export default function DesktopImageLink(props: DesktopImageLinkProps) {
       <div
         className={`z-10 w-full relative border-2 bg-valorant-black border-white bg-gradient-to-t from-black/50 via-transparent to-transparent ${beforeClasses} ${afterClasses}`}
       >
-        <img className="w-full h-24 object-cover" src={image} />
+        <Image
+          className="w-full h-24 object-cover"
+          containerClassName="w-full h-full"
+          src={image}
+        />
       </div>
       <div className="uppercase text-center text-xs font-extralight font-monument tracking-wider text-white">
         {label}

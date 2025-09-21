@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Image from "../image";
 
 interface MobileImageLinkProps {
   image: string;
@@ -19,7 +20,11 @@ export default function MobileImageLink(props: MobileImageLinkProps) {
       <div
         className={`z-10 w-full relative border-2 bg-valorant-black border-white bg-gradient-to-t from-black/50 via-transparent to-transparent ${beforeClasses} ${afterClasses}`}
       >
-        <img className="w-full h-18.5 object-cover" src={image} />
+        <Image
+          containerClassName="w-full h-18.5"
+          className="w-full h-full object-cover"
+          src={image}
+        />
       </div>
       <div className="uppercase text-center text-xs font-extralight font-monument tracking-wider text-white">
         {label}
