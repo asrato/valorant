@@ -33,6 +33,25 @@ export type AgentT = {
   voiceLine: unknown;
 };
 
+export type BuddyT = {
+  uuid: string;
+  displayName: string;
+  isHiddenIfNotOwned: boolean;
+  themeUuid: string | null;
+  displayIcon: string;
+  assetPath: string;
+  levels: BuddyLevelT[];
+};
+
+export type BuddyLevelT = {
+  uuid: string;
+  charmLevel: number;
+  hideIfNotOwned: boolean;
+  displayName: string;
+  displayIcon: string;
+  assetPath: string;
+};
+
 export type RoleT = {
   assetPath: string;
   description: string;

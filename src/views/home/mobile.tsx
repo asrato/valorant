@@ -15,6 +15,11 @@ export default function HomeViewMobile() {
           label="Agents"
           onClick={() => navigate("/agents")}
         />
+        <Button
+          className="col-span-1"
+          label="Buddies"
+          onClick={() => navigate("/buddies")}
+        />
       </div>
     </>
   );

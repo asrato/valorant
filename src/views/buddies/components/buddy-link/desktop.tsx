@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import Image from "../image";
 
-interface MobileImageLinkProps {
+import Image from "../../../../shared/image";
+
+interface DesktopBuddyLinkProps {
   image: string;
   label: string;
   url: string;
 }
 
-export default function MobileImageLink(props: MobileImageLinkProps) {
+export default function DesktopBuddyLink(props: DesktopBuddyLinkProps) {
   const { image, label, url } = props;
 
   const afterClasses =
@@ -21,8 +22,8 @@ export default function MobileImageLink(props: MobileImageLinkProps) {
         className={`z-10 w-full relative border-2 bg-valorant-black border-white bg-gradient-to-t from-black/50 via-transparent to-transparent ${beforeClasses} ${afterClasses}`}
       >
         <Image
-          containerClassName="w-full h-18.5"
-          className="w-full h-full object-cover"
+          className="w-full h-24 object-contain"
+          containerClassName="w-full h-full"
           src={image}
         />
       </div>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { AxiosInstance } from "axios";
 
-import type { AgentT } from "../data/types";
+import type { AgentT, BuddyT } from "../data/types";
 import type { ApiResponse } from "./types";
 
 const API_URL = "https://valorant-api.com/v1";
@@ -25,6 +25,10 @@ class ValorantAPI {
 
   async getAgent(uuid: string): Promise<ApiResponse<AgentT>> {
     return this.fetchEndpoint(`/agents/${uuid}`);
+  }
+
+  async getBuddies(): Promise<ApiResponse<BuddyT[]>> {
+    return this.fetchEndpoint("/buddies");
   }
 }
 

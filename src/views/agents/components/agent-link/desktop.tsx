@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-import Image from "../image";
+import Image from "../../../../shared/image";
 
-interface DesktopImageLinkProps {
+interface DesktopAgentLinkProps {
   image: string;
   label: string;
   url: string;
 }
 
-export default function DesktopImageLink(props: DesktopImageLinkProps) {
+export default function DesktopAgentLink(props: DesktopAgentLinkProps) {
   const { image, label, url } = props;
 
   const afterClasses =

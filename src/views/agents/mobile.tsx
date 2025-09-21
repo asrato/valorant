@@ -2,7 +2,7 @@ import useGetAgents from "../../hooks/use-get-agents";
 import ErrorLayout from "../../layout/error";
 import LoadingLayout from "../../layout/loading";
 import Title from "../../layout/title";
-import ImageLink from "../../shared/image-link";
+import AgentLink from "./components/agent-link";
 
 export default function AgentsViewMobile() {
   const { data, error, loading } = useGetAgents();
@@ -18,7 +18,7 @@ export default function AgentsViewMobile() {
         {data
           .sort((a, b) => a.displayName.localeCompare(b.displayName))
           .map((agent) => (
-            <ImageLink
+            <AgentLink
               image={agent.killfeedPortrait}
               key={agent.uuid}
               label={agent.displayName}
