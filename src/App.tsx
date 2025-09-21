@@ -7,7 +7,7 @@ import AgentView from "./views/agent";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/valorant">
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomeView />} />
