@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
-
+import type { BuddyT } from "../data/types";
 import { valorantAPI } from "../api/base";
-import type { AgentT } from "../data/types";
 
-export default function useGetAgent(uuid: string) {
+export default function useGetBuddy(uuid: string) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
-  const [data, setData] = useState<AgentT | null>(null);
+  const [data, setData] = useState<BuddyT | null>(null);
 
   useEffect(() => {
     if (loading) {
       valorantAPI
-        .getAgent(uuid)
+        .getBuddy(uuid)
         .then((response) => {
           setData(response.data);
         })

@@ -5,7 +5,6 @@ import HomeView from "./views/home";
 import AgentsView from "./views/agents";
 import AgentView from "./views/agent";
 import BuddiesView from "./views/buddies";
-import BuddyView from "./views/buddy";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Route path="agents" element={<AgentsView />} />
           <Route path="agent/:uuid" element={<AgentView />} />
           <Route path="buddies" element={<BuddiesView />} />
-          <Route path="buddy/:uuid" element={<BuddyView />} />
         </Route>
       </Routes>
     </HashRouter>

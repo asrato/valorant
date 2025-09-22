@@ -2,7 +2,7 @@ import useGetBuddies from "../../hooks/use-get-buddies";
 import ErrorLayout from "../../layout/error";
 import LoadingLayout from "../../layout/loading";
 import Title from "../../layout/title";
-import BuddyLink from "./components/buddy-link";
+import BuddyImage from "./components/buddy-image";
 
 export default function MobileBuddiesView() {
   const { data, error, loading } = useGetBuddies();
@@ -14,15 +14,14 @@ export default function MobileBuddiesView() {
   return (
     <>
       <Title content="Buddies" />
-      <div className="w-full grid grid-cols-2 gap-4">
+      <div className="w-full flex flex-col items-center gap-4">
         {data
           .sort((a, b) => a.displayName.localeCompare(b.displayName))
           .map((buddy) => (
-            <BuddyLink
+            <BuddyImage
               image={buddy.displayIcon}
               key={buddy.uuid}
               label={buddy.displayName}
-              url={`/buddy/${buddy.uuid}`}
             />
           ))}
       </div>

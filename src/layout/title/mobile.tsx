@@ -34,7 +34,7 @@ export default function MobileTitle(props: MobileTitleProps) {
           </div>
         </div>
       )}
-      <span className="uppercase text-4xl font-bold font-monument tracking-widest text-white whitespace-nowrap">
+      <span className="uppercase text-4xl font-bold font-monument tracking-widest text-white">
         {content}
       </span>
     </h1>
