@@ -1,4 +1,4 @@
-[URL](https://asrato.github.io/valorant/#/)
+[URL](https://asrato.github.io/valorant-app/#/)
 
 # React + TypeScript + Vite
 

@@ -5,6 +5,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/valorant/",
+  base: "/valorant-app/",
   plugins: [react(), tailwindcss(), svgr()],
 });
