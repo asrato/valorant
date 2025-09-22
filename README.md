@@ -1,71 +1,87 @@
-[URL](https://asrato.github.io/valorant-app/#/)
+# Valorant App
 
-# React + TypeScript + Vite
+Responsive web application built with React + TypeScript + Vite, consuming the [Valorant API](https://dash.valorant-api.com/) to display information about Valorant game.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
 
-Currently, two official plugins are available:
+- List of playable Valorant agents, with navigation to each agent's details
+- Detailed view for each agent: name, codename, description, role, image, and abilities
+- List of available buddies (gun buddies) in the game
+- Responsive UI: optimized experience for both desktop and mobile
+- Fast navigation between Home, Agents, and Buddies
+- Friendly loading and error handling
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Deployment
 
-## Expanding the ESLint configuration
+The project is live [here](https://asrato.github.io/valorant-app/#/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Automatic deployment via GitHub Actions to GitHub Pages on every push to the `main` branch.
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies & Tools
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [Axios](https://axios-http.com/)
+- [Valorant API](https://valorant-api.com/)
+- [GitHub Actions](https://github.com/features/actions) for CI/CD
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## 📁 Project Structure
+
+```
+src/
+  api/           # Valorant API integration
+  data/          # Types and helper data
+  hooks/         # Custom React hooks
+  layout/        # Layout components (navbar, sidebar, loading, error, etc)
+  shared/        # Shared components (button, image, spinner)
+  views/         # Pages/views: home, agents, agent, buddies
+    agents/      # Agents list
+    agent/       # Agent detail
+    buddies/     # Buddies list
+    home/        # Home page
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Installation & Local Usage
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/asrato/valorant-app.git
+   cd valorant-app
+   ```
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+3. Run the project locally:
+   ```bash
+   yarn dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173)
 
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+## 🧪 Available Scripts
+
+- `yarn dev` — start the development server
+- `yarn build` — production build
+- `yarn preview` — preview the production build
+- `yarn lint` — lint the code with ESLint
+
+## 📝 Development Notes
+
+- The project uses ESLint with configuration for React, TypeScript, and hooks.
+- Deployment is automatic to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+- Vite's base is set to `/valorant-app/` to work with GitHub Pages.
+- The design is fully responsive, with separate components for desktop and mobile.
+
+## � Motivation
+
+- To learn and practice modern React (with hooks, functional components, and TypeScript)
+- To explore building fully responsive UIs for both desktop and mobile using `navigator.userAgent`
+- To practice clean code structure and modular component design
+- For fun and as a portfolio project
+
+## �📄 License
+
+This project is for educational purposes only and is not affiliated with Riot Games.
